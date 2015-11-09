@@ -31,10 +31,10 @@ class MessageExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFilter('fos_message_is_read', array($this, 'isRead')),
-            new \Twig_SimpleFilter('fos_message_nb_unread', array($this, 'getNbUnread')),
-            new \Twig_SimpleFilter('fos_message_can_delete_thread', array($this, 'canDeleteThread')),
-            new \Twig_SimpleFilter('fos_message_deleted_by_participant', array($this, 'isThreadDeletedByParticipant'))
+            new \Twig_SimpleFunction('fos_message_is_read', array($this, 'isRead')),
+            new \Twig_SimpleFunction('fos_message_nb_unread', array($this, 'getNbUnread')),
+            new \Twig_SimpleFunction('fos_message_can_delete_thread', array($this, 'canDeleteThread')),
+            new \Twig_SimpleFunction('fos_message_deleted_by_participant', array($this, 'isThreadDeletedByParticipant'))
         );
     }
 
